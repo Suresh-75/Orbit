@@ -1,38 +1,96 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import logo from "./assets/Orbitlogoblack.jpg";
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) {
+      setIsOpen(false);
+    }
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "Aerostructures", path: "/aerostructures" },
+    { name: "Avionics", path: "/avionics" },
+  ];
+
   return (
-    <nav className="flex justify-between relative items-center">
-      <ul className="flex justify-between w-[40%] items-center  text-white">
-        <img src={logo} className="h-25" />
-        <li to={"/"} className="text-white hover:cursor-pointer ">
-          <p class="text-lg  group relative w-max">
-            <span>Home</span>
-            <span class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>
-          </p>
-        </li>
-        <li to={"/aboutus"} className="text-white hover:cursor-pointer ">
-          <p class="text-lg  group relative w-max">
-            <span>About Us</span>
-            <span class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>
-          </p>
-        </li>
-        <li to={"/aerostructures"} className="text-white hover:cursor-pointer ">
-          <p class="text-lg  group relative w-max">
-            <span>Aerostructures</span>
-            <span class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>
-          </p>
-        </li>
-        <li to={"/avionics"} className="text-white hover:cursor-pointer ">
-          <p class="text-lg  group relative w-max">
-            <span>Avionics</span>
-            <span class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>
-          </p>
-        </li>
-      </ul>
-      <button className="text-white p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
-        Support us
-      </button>
+    <nav className="relative z-50">
+      <div className="flex justify-between items-center pt-4 px-6 lg:px-12">
+        <div className="z-50">
+          <img src={logo} alt="Orbit Logo" className="h-16 lg:h-20 pt-2" />
+        </div>
+        <ul className="hidden lg:flex justify-evenly w-2/3 items-center text-white">
+          {navItems.map((item, index) => (
+            <li key={index} className="text-white hover:cursor-pointer">
+              <p className="text-xl group relative w-max">
+                <span>{item.name}</span>
+                <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>
+              </p>
+            </li>
+          ))}
+        </ul>
+        <button className="text-white  text-xl  p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
+          Support us
+        </button>
+        <button
+          className="lg:hidden text-white z-50"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+      {isOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center lg:hidden z-40">
+          <ul className="flex flex-col items-center space-y-8 text-white">
+            {navItems.map((item, index) => (
+              <li
+                key={index}
+                className="text-white hover:cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                <p className="text-2xl group relative w-max">
+                  <span>{item.name}</span>
+                  <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>
+                </p>
+              </li>
+            ))}
+            <li className="pt-6">
+              <button className="text-white  text-xl  p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
+                Support us
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
