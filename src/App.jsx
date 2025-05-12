@@ -15,7 +15,7 @@ function App() {
       <div className="container mx-auto px-2 lg:px-0">
         <Nav />
         <div className="relative">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 min-h-[70vh] pt-8 lg:pt-16 pb-12">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 min-h-[70vh] pt-4 lg:pt-0 pb-12">
             <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 Lorem ipsum dolor sit amet consectetur
