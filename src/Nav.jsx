@@ -57,7 +57,7 @@ function Nav() {
             </li>
           ))}
         </ul>
-        <button className="text-white  text-xl  p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
+        <button className=" max-lg:hidden text-white  text-xl  p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
           Support us
         </button>
         <button
@@ -84,7 +84,7 @@ function Nav() {
               </li>
             ))}
             <li className="pt-6">
-              <button className="text-white  text-xl  p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
+              <button className="  text-white  text-xl  p-2 px-5 border hover:cursor-pointer transition-all duration-300 hover:shadow-none  shadow-[5px_5px_rgba(255,255,255,0.8)]">
                 Support us
               </button>
             </li>
