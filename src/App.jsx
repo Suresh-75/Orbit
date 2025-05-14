@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
+import ContactUs from "./ContactUs";
 import Particles from "./components/Particles";
 import rocket from "./assets/rc.avif";
 import { useNavigate } from "react-router-dom";
@@ -44,6 +45,7 @@ function App() {
             </div>
           </div>
           <AboutUs />
+          <ContactUs />
         </div>
       </div>
     </div>
