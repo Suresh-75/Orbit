@@ -250,11 +250,13 @@ function ContactUs() {
         </Snackbar>
       </form>
       <br />
-      <h3 className="text-white text-5xl mt-7 mb-5">Contact details</h3>
-      <div className="flex">
-        <div className="h-50  flex items-center">
-          <LocationOnIcon sx={{ fontSize: "4rem", marginRight: "1rem" }} />
-          <p className="text-xl">
+      <h3 className="text-white text-[2rem] mt-7 mb-5 max-lg:mt-5 max-lg:mb-2">
+        Contact details
+      </h3>
+      <div className="flex max-lg:flex-col">
+        <div className="h-50  max-lg:h-max flex items-center">
+          <LocationOnIcon sx={{ fontSize: "4rem", marginRight: "0.35rem" }} />
+          <p className="text-xl max-lg:text-[1rem]">
             <span className="font-bold">
               National Institute of Technology Tiruchirappalli,
             </span>
@@ -265,7 +267,7 @@ function ContactUs() {
         <div className=" w-[100%] h-50  flex flex-col justify-center">
           <div className=" w-[50%]  flex items-center ">
             <PhoneIcon sx={{ fontSize: "3rem", marginRight: "1rem" }} />
-            <p className="text-xl">
+            <p className="text-xl max-lg:text-[1rem]">
               <span className="font-bold">Johan</span>
               <br />
               99999999
@@ -273,7 +275,7 @@ function ContactUs() {
           </div>
           <div className=" flex items-center">
             <EmailIcon sx={{ fontSize: "3rem", marginRight: "1rem" }} />
-            <p className="text-xl">
+            <p className="text-xl max-lg:text-[1rem]">
               <span className="font-bold">orbitnitt@gmail.com</span>
             </p>
           </div>
