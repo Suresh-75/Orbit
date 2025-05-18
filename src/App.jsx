@@ -22,7 +22,7 @@ function App() {
         <img
           src={earth}
           alt="Rocket"
-          className=" absolute opacity-60 right-0 top-0  object-cover max-lg:scale-x-350 max-lg:scale-y-450 max-lg:top-100"
+          className=" absolute opacity-60 right-0 top-0  object-cover max-lg:scale-x-350 max-lg:scale-y-450 max-lg:top-125"
         />
         <div className="relative ">
           <div className="flex pt-20  justify-center items-center  flex-col min-h-[80vh]  max-lg:h-[40vh] pb-12 max-lg:pb-5 ">
