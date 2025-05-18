@@ -284,8 +284,8 @@ function ContactUs() {
             </p>
           </div>
         </div>
-        <div className="w-[100%] h-50 max-lg:h-max flex  justify-start items-center">
-          <div className="mx-5  max-lg:mx-2">
+        <div className="w-[100%] h-50 max-lg:h-max flex  justify-start items-center pb-5">
+          <div className="mx-5  max-lg:mx-2 ">
             <a target="_blank" href="https://www.instagram.com/orbit_nitt/">
               <img
                 src={insta}

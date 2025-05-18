@@ -4,7 +4,7 @@ const TypewriterEffect = ({
   text = "PUSHING EVERY LIMIT.",
   speed = 80,
   showCursor = true,
-  hideCursorOnComplete = false,
+  hideCursorOnComplete = true,
   cursorClassName = "",
   onComplete = null,
 }) => {
@@ -26,7 +26,7 @@ const TypewriterEffect = ({
   }, [displayedText, text, speed, onComplete]);
 
   return (
-    <span className="flex items-center justify-center  text-center max-lg:text-2xl">
+    <span className="flex items-center justify-center  text-center max-lg:text-3xl">
       {displayedText}
       {showCursor && (!hideCursorOnComplete || !isComplete) && (
         <span
