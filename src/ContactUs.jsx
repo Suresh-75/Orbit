@@ -50,7 +50,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="px-10">
+    <div className=" px-25 max-lg:px-5">
       <form onSubmit={submitForm} ref={form}>
         <h2 className="text-5xl">Let's connect</h2>
         <div className="flex py-5">

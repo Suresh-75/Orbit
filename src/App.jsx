@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="text-white min-h-screen font-mono overflow-x-hidden max-w-full">
       <Particles />
-      <div className="relative w-full overflow-x-hidden px-4">
+      <div className="relative w-full overflow-x-hidden px-20 max-lg:px-5">
         <Nav />
         <img
           src={earth}
