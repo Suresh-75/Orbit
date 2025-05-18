@@ -6,6 +6,10 @@ import emailjs from "@emailjs/browser";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
+
+import insta from "./assets/instagram.png";
+import linkedIn from "./assets/linkedin.png";
+
 function ContactUs() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -255,7 +259,7 @@ function ContactUs() {
       </h3>
       <div className="flex max-lg:flex-col">
         <div className="h-50  max-lg:h-max flex items-center">
-          <LocationOnIcon sx={{ fontSize: "4rem", marginRight: "0.35rem" }} />
+          <LocationOnIcon sx={{ fontSize: "4rem", marginRight: "0rem" }} />
           <p className="text-xl max-lg:text-[1rem]">
             <span className="font-bold">
               National Institute of Technology Tiruchirappalli,
@@ -264,20 +268,36 @@ function ContactUs() {
             620015
           </p>
         </div>
-        <div className=" w-[100%] h-50  flex flex-col justify-center">
-          <div className=" w-[50%]  flex items-center ">
+        <div className=" w-[70%]  h-50 max-lg:h-max max-lg:py-5  flex flex-col justify-center">
+          <div className=" w-[70%]  flex items-center  max-lg:pl-2 ">
             <PhoneIcon sx={{ fontSize: "3rem", marginRight: "1rem" }} />
             <p className="text-xl max-lg:text-[1rem]">
-              <span className="font-bold">Johan</span>
+              <span className="font-bold">Johan Suresh</span>
               <br />
-              99999999
+              9952972810
             </p>
           </div>
-          <div className=" flex items-center">
+          <div className=" flex items-center max-lg:pl-2">
             <EmailIcon sx={{ fontSize: "3rem", marginRight: "1rem" }} />
             <p className="text-xl max-lg:text-[1rem]">
               <span className="font-bold">orbitnitt@gmail.com</span>
             </p>
+          </div>
+        </div>
+        <div className="w-[100%] h-50 max-lg:h-max flex  justify-start items-center">
+          <div className="mx-5  max-lg:mx-2">
+            <a target="_blank" href="https://www.instagram.com/orbit_nitt/">
+              <img
+                src={insta}
+                alt="Instagram"
+                className="w-13 cursor-pointer"
+              />
+            </a>
+          </div>
+          <div>
+            <a target="_blank" href="https://in.linkedin.com/company/orbitnitt">
+              <img src={linkedIn} alt="" className="w-13 cursor-pointer" />
+            </a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "./assets/Orbitlogoblack.jpg";
+import logo from "./assets/OrbitlogoblackR.png";
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,6 +21,7 @@ function Nav() {
     { name: "About Us", path: "/aboutus" },
     { name: "Aerostructures", path: "/aerostructures" },
     { name: "Avionics", path: "/avionics" },
+    { name: "Sponsors", path: "/sponsors" },
   ];
 
   return (
