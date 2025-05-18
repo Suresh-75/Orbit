@@ -2,7 +2,7 @@ import React from "react";
 import aero from "./assets/aero.svg";
 export default function Aerostructures() {
   return (
-    <div className="flex flex-col items-center justify-start my-25 max-lg:my-10 ">
+    <div className="flex flex-col items-center justify-start my-25 max-lg:my-10 max-lg:mt-20 ">
       <h2 className="text-center text-6xl font-bold bg-gradient-to-r from-blue-200 to-blue-400 bg-clip-text text-transparent  max-lg:text-4xl max-lg:mb-5">
         AEROSTRUCTURES
       </h2>
