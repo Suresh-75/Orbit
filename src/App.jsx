@@ -13,15 +13,11 @@ import Avionics from "./Avionics";
 import Sponsors from "./Sponsors";
 function App() {
   const navigate = useNavigate();
-
-  // Apply global overflow fix to prevent horizontal scrolling
   React.useEffect(() => {
-    // Add overflow-x-hidden to both html and body
     document.documentElement.style.overflowX = "hidden";
     document.body.style.overflowX = "hidden";
     document.body.style.width = "100%";
 
-    // Cleanup function to restore settings if needed
     return () => {
       document.documentElement.style.overflowX = "";
       document.body.style.overflowX = "";
@@ -32,15 +28,15 @@ function App() {
   return (
     <div className="text-white min-h-screen font-mono overflow-x-hidden max-w-full">
       <Particles />
-      <div className="relative w-full overflow-x-hidden px-20 max-lg:px-5">
+      <div className="relative w-full overflow-x-hidden ">
         <Nav />
         <img
           src={earth}
           alt="Rocket"
-          className="absolute opacity-60 right-0 top-0 object-cover max-w-full max-lg:scale-x-350 max-lg:scale-y-450 max-lg:top-125"
+          className="absolute top-0 left-0 w-full h-screen object-cover opacity-60 z-0 object-top"
         />
-        <div className="relative max-w-full overflow-hidden">
-          <div className="flex pt-20 justify-center items-center flex-col min-h-[80vh] max-lg:h-[40vh] pb-12 max-lg:pb-5">
+        <div className="relative max-w-full overflow-hidden ">
+          <div className="flex pt-20 justify-center items-center flex-col min-h-[80vh] max-lg:h-[40vh] px-20 max-lg:px-5 pb-12 max-lg:pb-5">
             <div className="flex flex-row justify-center items-center">
               <h1 className="text-7xl font-bold leading-tight">
                 <TypewriterEffect
@@ -53,16 +49,18 @@ function App() {
               </h1>
             </div>
           </div>
-          <div className="flex items-center justify-center h-24 mb-8">
+          <div className="flex items-center justify-center h-24 mb-3">
             <div className="animate-pulse">
               <img src={moveIcon} alt="Scroll down" className="h-12 md:h-16" />
             </div>
           </div>
-          <AboutUs />
-          <Aerostructures />
-          <Avionics />
-          <Sponsors />
-          <ContactUs />
+          <div className="bg-[rgba(10,14,20,0.6)] pt-5">
+            <AboutUs />
+            <Aerostructures />
+            <Avionics />
+            <Sponsors />
+            <ContactUs />
+          </div>
         </div>
       </div>
     </div>

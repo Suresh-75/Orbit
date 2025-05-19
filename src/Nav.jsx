@@ -25,7 +25,7 @@ function Nav() {
   ];
 
   return (
-    <nav className="relative z-50">
+    <nav className="relative z-50 px-20 max-lg:px-5">
       <div className="flex justify-between items-center pt-4 px-6 lg:px-12">
         <div className="z-50">
           <img src={logo} alt="Orbit Logo" className="h-16 lg:h-20 pt-2" />
