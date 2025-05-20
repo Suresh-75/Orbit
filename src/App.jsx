@@ -54,7 +54,7 @@ function App() {
               </h1>
             </div>
           </div>
-          <div className="flex items-center justify-center h-24 mb-3">
+          <div className="flex items-center justify-center h-24">
             <div className="animate-pulse">
               <img src={moveIcon} alt="Scroll down" className="h-12 md:h-16" />
             </div>
