@@ -60,7 +60,7 @@ function App() {
             </div>
           </div>
           <div className="bg-[rgba(10,14,25,0.6)] pt-5">
-            <div id="Who are we">
+            <div id="About Us">
               <AboutUs />
             </div>
             <div id="Aerostructures">

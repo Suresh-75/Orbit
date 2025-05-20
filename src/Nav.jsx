@@ -18,7 +18,7 @@ function Nav({ scrollIntoView }) {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Who are we", path: "/aboutus" },
+    { name: "About Us", path: "/aboutus" },
     { name: "Aerostructures", path: "/aerostructures" },
     { name: "Avionics", path: "/avionics" },
     { name: "Resources", path: "/Resources" },
@@ -65,7 +65,10 @@ function Nav({ scrollIntoView }) {
               <li
                 key={index}
                 className="text-white hover:cursor-pointer"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  scrollIntoView(item.name);
+                  setIsOpen(false);
+                }}
               >
                 <p className="text-2xl group relative w-max">
                   <span>{item.name}</span>

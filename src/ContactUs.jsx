@@ -272,7 +272,7 @@ function ContactUs() {
           <div className=" w-[70%]  flex items-center  max-lg:pl-2 ">
             <PhoneIcon sx={{ fontSize: "3rem", marginRight: "1rem" }} />
             <p className="text-xl max-lg:text-[1rem]">
-              <span className="font-bold">Johan Suresh</span>
+              <span className="font-bold">Team Lead</span>
               <br />
               9952972810
             </p>
