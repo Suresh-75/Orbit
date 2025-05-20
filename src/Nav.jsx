@@ -21,6 +21,7 @@ function Nav({ scrollIntoView }) {
     { name: "Who are we", path: "/aboutus" },
     { name: "Aerostructures", path: "/aerostructures" },
     { name: "Avionics", path: "/avionics" },
+    { name: "Resources", path: "/Resources" },
     { name: "Sponsors", path: "/sponsors" },
   ];
 
