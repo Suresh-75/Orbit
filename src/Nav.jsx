@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "./assets/OrbitlogoblackR.png";
-function Nav() {
+function Nav({ scrollIntoView }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function Nav() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/aboutus" },
+    { name: "Who are we", path: "/aboutus" },
     { name: "Aerostructures", path: "/aerostructures" },
     { name: "Avionics", path: "/avionics" },
     { name: "Sponsors", path: "/sponsors" },
@@ -32,7 +32,13 @@ function Nav() {
         </div>
         <ul className="hidden lg:flex justify-evenly w-2/3 items-center text-white">
           {navItems.map((item, index) => (
-            <li key={index} className="text-white hover:cursor-pointer">
+            <li
+              onClick={() => {
+                scrollIntoView(item.name);
+              }}
+              key={index}
+              className="text-white hover:cursor-pointer"
+            >
               <p className="text-xl group relative w-max">
                 <span>{item.name}</span>
                 <span className="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 bg-white group-hover:w-full"></span>

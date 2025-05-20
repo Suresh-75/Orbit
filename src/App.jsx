@@ -24,16 +24,21 @@ function App() {
       document.body.style.width = "";
     };
   }, []);
-
+  const scrollIntoView = (secID) => {
+    const element = document.getElementById(secID);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="text-white min-h-screen font-mono overflow-x-hidden max-w-full">
       <Particles />
       <div className="relative w-full overflow-x-hidden ">
-        <Nav />
+        <Nav scrollIntoView={scrollIntoView} />
         <img
           src={earth}
           alt="Rocket"
-          className="absolute top-0 left-0 w-full h-screen object-cover opacity-60 z-0 object-top"
+          className="absolute top-0 left-0 w-full h-screen object-cover opacity-60 z-0 object-top animate-pulse"
         />
         <div className="relative max-w-full overflow-hidden ">
           <div className="flex pt-20 justify-center items-center flex-col min-h-[80vh] max-lg:h-[40vh] px-20 max-lg:px-5 pb-12 max-lg:pb-5">
@@ -54,12 +59,22 @@ function App() {
               <img src={moveIcon} alt="Scroll down" className="h-12 md:h-16" />
             </div>
           </div>
-          <div className="bg-[rgba(10,14,20,0.6)] pt-5">
-            <AboutUs />
-            <Aerostructures />
-            <Avionics />
-            <Sponsors />
-            <ContactUs />
+          <div className="bg-[rgba(10,14,25,0.6)] pt-5">
+            <div id="Who are we">
+              <AboutUs />
+            </div>
+            <div id="Aerostructures">
+              <Aerostructures />
+            </div>
+            <div id="Avionics">
+              <Avionics />
+            </div>
+            <div id="Sponsors">
+              <Sponsors />
+            </div>
+            <div>
+              <ContactUs />
+            </div>
           </div>
         </div>
       </div>
