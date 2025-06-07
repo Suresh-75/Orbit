@@ -1,5 +1,6 @@
 import React from "react";
 import sp1 from "./assets/sp1.png";
+import sp3 from "./assets/sponsor3.webp";
 import sp2 from "./assets/sp2.png";
 function Sponsors() {
   return (
@@ -22,6 +23,14 @@ function Sponsors() {
             src={sp2}
             alt="sp2"
             className="h-40 ml-10 max-lg:h-25 max-lg:m-0"
+          />
+        </a>
+        <a target="_blank" href="https://www.solidworks.com/">
+          {" "}
+          <img
+            src={sp3}
+            alt="sp3"
+            className="h-30 ml-10 max-lg:h-25 max-lg:m-0"
           />
         </a>
       </div>
