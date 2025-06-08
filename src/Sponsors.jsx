@@ -25,7 +25,7 @@ function Sponsors() {
             className="h-40 ml-10 max-lg:h-25 max-lg:m-0"
           />
         </a>
-        <a target="_blank" href="https://www.solidworks.com/">
+        <a target="_blank" href="https://0xppl.com/">
           {" "}
           <img
             src={sp3}
